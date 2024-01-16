@@ -13,8 +13,7 @@ async_generator = import_module("async_generator").async_generator
 
 async def async_comprehension() -> List[float]:
     """Collects 10 random floats with 1s intervals."""
-    return [num async for num in async_generator()]
-
+    return [num async for num in async_generator(lambda: iter(range(10)))]
 
 # Example usage:
 async def main():
