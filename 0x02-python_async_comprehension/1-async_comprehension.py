@@ -4,11 +4,11 @@
 """Collects 10 random floats asynchronously."""
 
 import asyncio
-from importlib import import_module as using
+from importlib import import_module
 from typing import List
 
 # Import using importlib for flexibility
-async_generator = using("async_generator").async_generator
+async_generator = import_module("async_generator").async_generator
 
 
 async def async_comprehension() -> List[float]:
